@@ -25,7 +25,7 @@ create table role_rules(
 create table category(
     id serial primary key,
     "name" varchar(255)
-)
+);
 
 create table state(
     id serial primary key,
@@ -50,6 +50,6 @@ create table attachs(
     id serial primary key,
     title varchar(255),
     "path" text,
-    item_id int references item(id) unique
+    item_id int references item(id)
 );
 
