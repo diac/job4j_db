@@ -20,8 +20,7 @@ create table subscription(
 create table account_subscription(
     id serial primary key,
     account_id int references account(id),
-    subscription_id int references subscription("id"),
-    unique(account_id, subscription_id)
+    subscription_id int references subscription("id")
 );
 
 create table post(
