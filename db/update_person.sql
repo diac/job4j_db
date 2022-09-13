@@ -1,0 +1,1 @@
+UPDATE person SET registration_date = '2022-08-01';

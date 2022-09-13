@@ -1,0 +1,1 @@
+INSERT INTO person("name", age, registration_date) VALUES ('Nikolai', 37, '2022-09-13');
