@@ -18,8 +18,7 @@ create table rules(
 create table role_rules(
     id serial primary key,
     role_id int references role(id),
-    rule_id int references rules(id),
-    unique (role_id, rule_id)
+    rule_id int references rules(id)
 );
 
 create table category(
