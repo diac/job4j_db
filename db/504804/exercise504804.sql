@@ -129,7 +129,7 @@ $$
         delete from
             products
         where
-            price > max_price
+            price > max_price;
         return result;
     end;
 $$;
