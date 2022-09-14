@@ -89,4 +89,4 @@ select
     d."name"
 from
     employees as e
-    left join departments as d on e.department_id = d.id;
+    right join departments as d on e.department_id = d.id;
