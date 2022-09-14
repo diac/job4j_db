@@ -53,12 +53,13 @@ from
 where
     lower(b.name) like '%капитан%'
     or a.name in ('Александр Пушкин', 'Николай Гоголь')
+    and (
+        lower(s.name) like '%иван%'
+        or a.name = 'Николай Гоголь'
+    )
 group by
     s.name,
-    a.name
-having
-    lower(s.name) like '%иван%'
-    or a.name = 'Николай Гоголь';
+    a.name;
 
 /* Определение представления */
 create view exersise_view
@@ -74,12 +75,13 @@ create view exersise_view
     where
         lower(b.name) like '%капитан%'
         or a.name in ('Александр Пушкин', 'Николай Гоголь')
+        and (
+            lower(s.name) like '%иван%'
+            or a.name = 'Николай Гоголь'
+        )
     group by
         s.name,
-        a.name
-    having
-        lower(s.name) like '%иван%'
-        or a.name = 'Николай Гоголь';
+        a.name;
 
 /* Получение данных из представления */
 select
