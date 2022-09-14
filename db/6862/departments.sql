@@ -90,3 +90,12 @@ select
 from
     employees as e
     right join departments as d on e.department_id = d.id;
+
+/* Используя left join найти департаменты, у которых нет работников */
+select
+    d.*
+from
+    departments as d
+    left join employees as e on e.department_id = d.id
+where
+    e.id is null;
