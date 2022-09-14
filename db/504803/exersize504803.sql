@@ -62,12 +62,11 @@ $$
     BEGIN
         insert into
              history_of_price("name", price, date)
-		select 
-			"name", 
-			price,
+		values (
+			new."name", 
+			new.price,
 			now()
-		from 
-			inserted;
+		);		
         return new;
     END;
 $$
@@ -76,6 +75,5 @@ LANGUAGE 'plpgsql';
 create trigger log_price_history_trigger
     after insert
     on products
-    referencing new table as inserted
     for each row
     execute procedure log_price_history();
