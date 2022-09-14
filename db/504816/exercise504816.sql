@@ -35,6 +35,7 @@ DECLARE
 						
 move forward all from cursor_products;
 
+/* Через fetch prior */
 fetch prior from cursor_products; /* 20 */
 fetch prior from cursor_products; /* 19 */
 fetch prior from cursor_products; /* 18 */
@@ -55,6 +56,50 @@ fetch prior from cursor_products; /* 4 */
 fetch prior from cursor_products; /* 3 */
 fetch prior from cursor_products; /* 2 */
 fetch prior from cursor_products; /* 1 */
+
+move forward all from cursor_products;
+
+/* Через move backward и fetch */
+move backward 2 from cursor_products;
+fetch from cursor_products;
+move backward 2 from cursor_products;
+fetch from cursor_products;
+move backward 2 from cursor_products;
+fetch from cursor_products;
+move backward 2 from cursor_products;
+fetch from cursor_products;
+move backward 2 from cursor_products;
+fetch from cursor_products;
+move backward 2 from cursor_products;
+fetch from cursor_products;
+move backward 2 from cursor_products;
+fetch from cursor_products;
+move backward 2 from cursor_products;
+fetch from cursor_products;
+move backward 2 from cursor_products;
+fetch from cursor_products;
+move backward 2 from cursor_products;
+fetch from cursor_products;
+move backward 2 from cursor_products;
+fetch from cursor_products;
+move backward 2 from cursor_products;
+fetch from cursor_products;
+move backward 2 from cursor_products;
+fetch from cursor_products;
+move backward 2 from cursor_products;
+fetch from cursor_products;
+move backward 2 from cursor_products;
+fetch from cursor_products;
+move backward 2 from cursor_products;
+fetch from cursor_products;
+move backward 2 from cursor_products;
+fetch from cursor_products;
+move backward 2 from cursor_products;
+fetch from cursor_products;
+move backward 2 from cursor_products;
+fetch from cursor_products;
+move backward 2 from cursor_products;
+fetch from cursor_products;
 						
 CLOSE cursor_products;
 
